@@ -83,6 +83,7 @@
   border-radius: 50%;
   background-color: #fff;
   border: 5px solid #5CADEA;
+  cursor: pointer;
 }
 
 .slider-block__tooltip-area {
