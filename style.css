@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.slider {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  width: 1350px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, .1);
+
+  font-family: 'Raleway';
+  font-weight: 600;
+}
+
+.switcher {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.switcher input {
+  display: none;
+}
+
+.switcher label {
+  font-size: 14px;
+  list-style: 18px;
+  color: rgba(1, 103, 179, .5);
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.switcher span {
+  border-bottom: 1px solid #D3DCF1;
+}
+
+#all-year:checked + label span,
+#all-month:checked + label span {
+  color: rgb(1, 103, 179);
+  border-bottom: none;
+}
+
+.slider-block {
+  position: relative;
+  top: 20px;
+  width: 100%;
+}
+
+.slider-block__bar {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: #EDF1F8;
+  border-radius: 100px;
+}
+
+.slider-block__text {
+  padding: 13px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.slider-block__text>.year {
+  color: #999999;
+
+}
+.slider-block__text>.month {
+  min-width: 2px;
+}
+
+.min, .max {
+  z-index: 999;
+  position: absolute;
+  top: -5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 5px solid #5CADEA;
+}
+
+.slider-block__tooltip-area {
+  display: flex;
+  padding: 18px 0;
+}
+
+.tooltip {
+  width: 100px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(14, 88, 143, 0.2);
+  border-radius: 10px;
+}
+
+.tooltip-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60px;
+  color: #0167B3;
+  font-size: 18px;
+}
+
+.tooltip-min {
+  top: -80px;
+}
+
+.tooltip-max {
+  bottom: -80px;
+}
+
+.tooltip-min__triangle {
+  position: absolute;
+  bottom: -10px;
+  left: 45px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #fff;
+  z-index: 999;
+}
+
+.tooltip-max__triangle {
+  position: absolute;
+  top: -10px;
+  left: 45px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #fff;
+  z-index: 999;
+}
+
+.range-color {
+  position: absolute;
+  height: 10px;
+  background-color: #5CADEA;
+}
+
+@media (max-width: 1199.98px) {
+  .slider {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slider-block {
+    width: 100%;
+  }
+
+  .switcher {
+    align-self: flex-start;
+    padding: 100px 0;
+  }
+
+  #all-month + label{
+    display: none;
+  }
+}

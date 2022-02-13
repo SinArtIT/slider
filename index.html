@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="slider">
+      <div class="switcher">
+        <input type="radio" name="switch" id='all-year' checked>
+        <label for="all-year"><span>Все года</span></label>
+        <input type="radio" name="switch" id='all-month' class="switch">
+        <label for="all-month"><span>Месяца</span></label>
+      </div>
+      <div class="slider-block">
+        <div class="slider-block__bar">
+          <div class="tooltip tooltip-min">
+            <div class="tooltip-min__block tooltip-block">
+            </div>
+            <div class="tooltip-min__triangle"></div>
+          </div>
+          <div class="tooltip tooltip-max">
+            <div class="tooltip-max__block tooltip-block">
+            </div>
+            <div class="tooltip-max__triangle"></div>
+          </div>
+          <div class="min"></div>
+          <div class="range-color"></div>
+          <div class="max"></div>
+        </div>
+        <div class="slider-block__text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./slider.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
